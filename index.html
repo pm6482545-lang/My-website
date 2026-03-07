@@ -354,101 +354,103 @@ footer i {
             <p class="video-desc">"Kua kiumbe kipya" — Celebrating transformation and new beginnings through gospel melody.</p>
         </div>
     </div>
-        </section>
+            </section>
 
     <style>
-        .premium-container { max-width: 800px; margin: 40px auto; padding: 20px; }
+        .premium-container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
         .premium-card { 
             border: 2px solid #2563eb; 
             background: #f8fafc; 
             text-align: center; 
             padding: 40px 20px; 
             border-radius: 20px; 
-            box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .premium-card:hover { transform: translateY(-5px); }
-        .price-badge { 
-            background: #dbeafe; 
-            color: #1e40af; 
-            padding: 8px 20px; 
-            border-radius: 25px; 
-            font-size: 0.9rem; 
-            font-weight: bold; 
-            border: 1px solid #bfdbfe;
-            display: inline-block;
-            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.1);
         }
         .portal-btn { 
             background: #2563eb; 
-            color: white; 
+            color: white !important; 
             display: inline-block; 
-            padding: 16px 40px; 
+            padding: 15px 35px; 
             text-decoration: none; 
-            border-radius: 12px; 
+            border-radius: 10px; 
             font-weight: bold; 
-            font-size: 1.1rem; 
-            box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.3);
+            font-size: 1.1rem;
             transition: 0.3s;
         }
-        .portal-btn:hover { background: #1d4ed8; box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4); }
-        
-        .footer-dark { background: #0f172a; color: white; padding: 60px 20px; text-align: center; }
-        .whatsapp-link { background: #25d366; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 10px; }
+        .portal-btn:hover { background: #1d4ed8; transform: translateY(-2px); }
+        .footer-socials { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin: 25px 0; }
+        .soc-btn { padding: 10px 20px; border-radius: 8px; color: white; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 8px; }
     </style>
 
-    <section id="premium" style="padding: 20px; background: #ffffff;">
+    <section id="downloads" style="padding: 60px 20px; background: #ffffff; text-align: center;">
+        <h2 class="section-title">FREE RESOURCES & APP</h2>
+        <p style="color: #64748b; max-width: 700px; margin: 0 auto 30px;">
+            Access our library of free revision notes and educational tools. 
+            Download our official mobile app for offline reading and instant notifications.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <a href="#" class="btn-main" style="background: #1e293b; color: white;">
+                <i class="fas fa-download"></i> DOWNLOAD FREE NOTES
+            </a>
+            <a href="#" class="btn-main" style="background: #ef4444; color: white;">
+                <i class="fab fa-google-play"></i> GET THE APP
+            </a>
+        </div>
+    </section>
+
+    <section id="premium" style="padding: 40px 0; background: #f1f5f9;">
         <div class="premium-container">
             <div class="premium-card">
                 <div style="font-size: 3.5rem; margin-bottom: 10px;">🔥</div>
-                <h2 style="color: #1e293b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px;">
-                    2026 EXAM PREDICTIONS PORTAL
-                </h2>
+                <h2 style="color: #1e293b; text-transform: uppercase; margin-bottom: 15px;">2026 EXAM PREDICTIONS PORTAL</h2>
                 <p style="color: #64748b; font-size: 1.1rem; line-height: 1.6; margin-bottom: 25px;">
-                    Download specialized <strong>KPSEA, KJSEA, and KCSE</strong> prediction materials and 
-                    <strong>Termly Updated Exams</strong> for the 2026 academic year.
+                    Get ahead with specialized <strong>KPSEA, KJSEA, and KCSE</strong> predictions and 
+                    <strong>Termly Updated Exams</strong>.
                 </p>
-                
-                <div class="price-badge">📍 KSH 50 - KSH 100</div>
-
+                <div style="background: #dbeafe; color: #1e40af; padding: 8px 20px; border-radius: 25px; display: inline-block; margin-bottom: 25px; font-weight: bold; border: 1px solid #bfdbfe;">
+                    📍 KSH 50 - KSH 100
+                </div>
                 <br>
                 <a href="predictions.html" class="portal-btn">
-                    ENTER PREDICTION PORTAL
+                    ENTER PREDICTION PORTAL <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="testimonials" style="padding: 60px 20px; background: #f8fafc;">
-        <h2 style="text-align: center; margin-bottom: 40px; color: #1e293b;">WHAT OTHERS SAY</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1100px; margin: auto;">
-            <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                <p style="font-style: italic; color: #475569; line-height: 1.5;">"The learning by doing approach is very effective for my students."</p>
+    <section id="testimonials" style="padding: 60px 20px; background: #ffffff;">
+        <h2 class="section-title" style="text-align: center; margin-bottom: 40px;">WHAT OTHERS SAY</h2>
+        <div class="testimonial-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1100px; margin: auto;">
+            <div class="testimonial-card" style="background: white; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                <p style="font-style: italic; color: #475569;">"The learning by doing approach is very effective for my students."</p>
                 <span style="display: block; margin-top: 15px; font-weight: bold; color: #2563eb;">- Grade 6 Teacher</span>
             </div>
-            <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
-                <p style="font-style: italic; color: #475569; line-height: 1.5;">"His music ministry is inspiring. The materials are well-organized."</p>
-                <span style="display: block; margin-top: 15px; font-weight: bold; color: #2563eb;">- Parent</span>
+            <div class="testimonial-card" style="background: white; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                <p style="font-style: italic; color: #475569;">"Very professional tutorials. My son improved in his KPSEA revision."</p>
+                <span style="display: block; margin-top: 15px; font-weight: bold; color: #2563eb;">- Candidate Parent</span>
             </div>
         </div>
     </section>
 
-    <footer class="footer-dark">
-        <h2 style="margin-bottom: 20px;">CONTACT PETER MUSAU</h2>
-        <p style="color: #94a3b8; margin-bottom: 30px;">For marking schemes, bulk orders, or direct inquiries.</p>
+    <footer id="contact" style="background: #0f172a; color: white; padding: 60px 20px; text-align: center;">
+        <h2 style="margin-bottom: 10px;">STAY CONNECTED</h2>
+        <p style="color: #94a3b8; margin-bottom: 30px;">Follow Peter Musau Mutua for the latest educational updates.</p>
         
-        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 40px;">
-            <a href="https://wa.me/254746357349" target="_blank" class="whatsapp-link">
-                <i class="fab fa-whatsapp"></i> WhatsApp Me
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/petermutua" target="_blank" class="soc-btn" style="background: #1877F2;">
+                <i class="fab fa-facebook-f"></i> Facebook
             </a>
-            <a href="mailto:petermusau826@gmail.com" style="background: #ffffff; color: #0f172a; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold;">
-                Email Me
+            <a href="https://wa.me/254746357349" target="_blank" class="soc-btn" style="background: #25d366;">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="mailto:petermusau826@gmail.com" class="soc-btn" style="background: #ffffff; color: #0f172a;">
+                <i class="fas fa-envelope"></i> Email
             </a>
         </div>
         
-        <div style="border-top: 1px solid #1e293b; padding-top: 30px; font-size: 0.85rem; color: #64748b;">
-            <p>&copy; 2026 Peter Musau Mutua. Dedicated to Educational Excellence.</p>
-            <p>Mombasa, Kenya</p>
+        <div style="border-top: 1px solid #1e293b; padding-top: 30px; margin-top: 30px; font-size: 0.85rem; color: #64748b;">
+            <p>&copy; 2026 Peter Musau Mutua. All Rights Reserved.</p>
+            <p>Mombasa, Kenya | Empowering the Next Generation</p>
         </div>
     </footer>
 
