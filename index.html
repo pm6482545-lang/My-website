@@ -413,7 +413,6 @@ footer i {
         border-radius: 50%;
         font-size: 18px;
         cursor: pointer;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
     @media (max-width: 768px) { .resource-grid { grid-template-columns: 1fr; } }
 </style>
@@ -427,16 +426,21 @@ footer i {
     <div class="resource-grid">
         <div class="res-card">
             <div style="font-size: 3rem;">📖</div>
-            <h3 style="color: #1e293b;">Peter Musau Mutua: Ministry & Music PDF Notes</h3>
-            <p style="color: #64748b; font-size: 0.9rem;">Providing <strong>Theological Notes</strong>, <strong>Music Theory</strong>, and <strong>Educational Curricula</strong> in Mombasa.</p>
-            <a href="https://drive.google.com/drive/folders/1KNMM3JUbuZQZ9gpyiO9Ctqb2lglFDN97" target="_blank" class="btn-main" style="background: #2563eb; color: white;">Download Free Documents</a>
+            <h3 style="color: #1e293b; text-transform: uppercase;">National Curriculum Resource Hub</h3>
+            <p style="color: #64748b; font-size: 0.9rem; line-height: 1.6;">
+                DOWNLOAD FREE <strong>PRIMARY, JUNIOR, SENIOR AND SECONDARY</strong> RESOURCES. 
+                GET FREE <strong>KPSEA, KJSEA AND KCSE</strong> MATERIALS, past papers, and ministry guides.
+            </p>
+            <a href="https://drive.google.com/drive/folders/1KNMM3JUbuZQZ9gpyiO9Ctqb2lglFDN97" target="_blank" class="btn-main" style="background: #2563eb; color: white;">
+                DOWNLOAD FREE MATERIALS
+            </a>
         </div>
 
         <div class="res-card" style="border: 2px solid #2563eb;">
             <div style="font-size: 3rem;">⭐</div>
-            <h3 style="color: #1e293b;">Premium Masterclasses</h3>
-            <p style="color: #64748b; font-size: 0.9rem;">Exclusive music arrangements and advanced leadership training.</p>
-            <a href="https://wa.me/254746357349?text=Hello%20Peter,%20I%20want%20to%20buy%20the%20Premium%20Materials" target="_blank" class="btn-main" style="background: #059669; color: white;">Order via M-Pesa</a>
+            <h3 style="color: #1e293b; text-transform: uppercase;">Premium Masterclasses</h3>
+            <p style="color: #64748b; font-size: 0.9rem;">Exclusive music arrangements and advanced leadership training for professionals.</p>
+            <a href="https://wa.me/254746357349?text=Hello%20Peter,%20I%20want%20to%20buy%20the%20Premium%20Materials" target="_blank" class="btn-main" style="background: #059669; color: white;">ORDER VIA M-PESA</a>
         </div>
     </div>
 </section>
@@ -455,15 +459,10 @@ footer i {
 
 <script>
     let mybutton = document.getElementById("scrollTopBtn");
-    window.onscroll = function() { 
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) { 
-            mybutton.style.display = "block"; 
-        } else { 
-            mybutton.style.display = "none"; 
-        } 
-    };
+    window.onscroll = function() { if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) { mybutton.style.display = "block"; } else { mybutton.style.display = "none"; } };
     function topFunction() { window.scrollTo({top: 0, behavior: 'smooth'}); }
 </script>
+
 
 </body>
 </html>
