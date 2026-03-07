@@ -24,6 +24,56 @@
     <title>PETER MUSAU MUTUA | Educator • Minister • Musician</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* --- Resource Center & Footer Enhancements --- */
+
+/* 1. The Resource Card Hover Effect */
+#resources div div:hover {
+    transform: translateY(-8px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* 2. The Download & M-Pesa Buttons */
+.download-button, .btn-premium {
+    transition: filter 0.2s, transform 0.2s;
+}
+
+.download-button:hover, .btn-premium:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+}
+
+/* 3. Social Media Icon Styling */
+footer i {
+    transition: transform 0.3s ease;
+}
+
+footer a:hover i {
+    transform: scale(1.3);
+}
+
+/* 4. Responsive Grid (Makes it look great on phones) */
+@media (max-width: 768px) {
+    #resources div {
+        grid-template-columns: 1fr !important; /* Stacks cards vertically on small screens */
+    }
+    
+    h2 {
+        font-size: 1.8rem !important; /* Adjusts heading size for mobile */
+    }
+}
+
+/* 5. Custom Scrollbar (Optional - for a modern look) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #2563eb;
+    border-radius: 10px;
+}
+
         /* Footer Icon Animations */
 footer a {
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -355,47 +405,39 @@ footer i {
     </div>
 </section>
 
-<section class="cta-section">
-    <h3>Interested in working together?</h3>
-    <br>
-    <a href="mailto:your-email@gmail.com" class="cta-btn">Send Me a Message</a>
+<<section id="resources" style="padding: 60px 20px; background-color: #f8fafc; font-family: sans-serif;">
+    <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+        <h2 style="font-size: 2.2rem; color: #0f172a; margin-bottom: 10px;">Resource Center</h2>
+        <p style="color: #64748b; margin-bottom: 40px;">Equipping you for spiritual and educational growth.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <div style="background: white; padding: 30px; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                <div style="font-size: 2.5rem; margin-bottom: 15px;">📖</div>
+                <h3 style="color: #1e293b;">Free Study Materials</h3>
+                <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 20px;">Download sermon notes and educational guides directly.</p>
+                <a href="https://drive.google.com/drive/folders/1KNMM3JUbuZQZ9gpyiO9Ctqb2lglFDN97" target="_blank" style="display: block; background: #2563eb; color: white; padding: 12px; border-radius: 10px; text-decoration: none; font-weight: bold;">Download Documents Here</a>
+            </div>
+
+            <div style="background: white; padding: 30px; border-radius: 20px; border: 2px solid #2563eb; box-shadow: 0 10px 15px rgba(37, 99, 235, 0.1);">
+                <div style="font-size: 2.5rem; margin-bottom: 15px;">⭐</div>
+                <h3 style="color: #1e293b;">Premium Masterclasses</h3>
+                <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 20px;">Advanced curricula and exclusive music compositions.</p>
+                <a href="https://wa.me/254746357349?text=Hello%20Bishop%20Peter,%20I%20want%20to%20buy%20the%20Premium%20Materials" target="_blank" style="display: block; background: #059669; color: white; padding: 12px; border-radius: 10px; text-decoration: none; font-weight: bold;">Order via M-Pesa</a>
+            </div>
+        </div>
+    </div>
 </section>
 
-<button onclick="topFunction()" id="scrollTopBtn" title="Go to top">↑</button>
-<script>
-let mybutton = document.getElementById("scrollTopBtn");
-
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-function topFunction() {
-  window.scrollTo({top: 0, behavior: 'smooth'});
-}
-</script>
-
-
-
-    <footer>
-        <footer style="background: #0f172a; color: #ffffff; padding: 60px 20px; text-align: center; border-top: 4px solid #2563eb;">
-    
+<footer style="background: #0f172a; color: #ffffff; padding: 60px 20px; text-align: center; border-top: 4px solid #2563eb;">
     <p style="font-style: italic; font-size: 1.1rem; color: #e2e8f0; max-width: 600px; margin: 0 auto 30px auto; line-height: 1.6;">
         "Education is a constant, the student is the variable—together we create infinite possibilities."
     </p>
 
     <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 30px;">
-        <a href="https://www.facebook.com/profile.php?id=100069418325247" target="_blank" 
-           style="width: 50px; height: 50px; background: #1877f2; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 20px;">
+        <a href="https://www.facebook.com/profile.php?id=100069418325247" target="_blank" style="width: 50px; height: 50px; background: #1877f2; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 20px;">
            <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="https://youtube.com/@petermutua3996" target="_blank" 
-           style="width: 50px; height: 50px; background: #ff0000; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 20px;">
+        <a href="https://youtube.com/@petermutua3996" target="_blank" style="width: 50px; height: 50px; background: #ff0000; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 20px;">
            <i class="fab fa-youtube"></i>
         </a>
     </div>
