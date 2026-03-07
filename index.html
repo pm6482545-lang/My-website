@@ -354,7 +354,7 @@ footer i {
             <p class="video-desc">"Kua kiumbe kipya" — Celebrating transformation and new beginnings through gospel melody.</p>
         </div>
     </div>
-                </section>
+           </section>
 
     <style>
         .premium-container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
@@ -369,32 +369,51 @@ footer i {
         .portal-btn { 
             background: #2563eb; 
             color: white !important; 
-            display: inline-flex; 
-            align-items: center; 
-            gap: 10px;
             padding: 15px 35px; 
             text-decoration: none; 
             border-radius: 10px; 
             font-weight: bold; 
-            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             transition: 0.3s;
         }
         .portal-btn:hover { background: #1d4ed8; transform: translateY(-2px); }
         .footer-socials { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin: 25px 0; }
         .soc-btn { padding: 10px 20px; border-radius: 8px; color: white; text-decoration: none; font-weight: bold; display: flex; align-items: center; gap: 8px; }
+        
+        /* SCROLL TO TOP ARROW STYLE */
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #2563eb;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: 0.3s;
+        }
+        .scroll-top:hover { background: #0f172a; transform: scale(1.1); }
     </style>
 
     <section id="downloads" style="padding: 60px 20px; background: #ffffff; text-align: center; border-top: 1px solid #e2e8f0;">
         <h2 style="color: #0f172a; margin-bottom: 20px;">FREE RESOURCES & APP</h2>
         <p style="color: #64748b; max-width: 700px; margin: 0 auto 30px;">
-            Access free revision notes and educational tools. 
+            Access our library of free revision notes and educational tools. 
             Download our official mobile app for offline reading and instant notifications.
         </p>
         <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-            <a href="#" class="btn-main" style="background: #1e293b; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold;">
-                <i class="fas fa-download"></i> DOWNLOAD FREE NOTES
+            <a href="https://drive.google.com/drive/folders/1KNMM3JUbuZQZ9gpyiO9Ctqb2lglFDN97" target="_blank" class="btn-main" style="background: #1e293b; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block;">
+                <i class="fas fa-download"></i> GET FREE REVISION AND STUDY MATERIALS
             </a>
-            <a href="#" class="btn-main" style="background: #ef4444; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold;">
+            <a href="#" class="btn-main" style="background: #ef4444; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block;">
                 <i class="fab fa-google-play"></i> GET THE APP
             </a>
         </div>
@@ -407,7 +426,7 @@ footer i {
                 <h2 style="color: #1e293b; text-transform: uppercase; margin-bottom: 15px;">2026 EXAM PREDICTIONS PORTAL</h2>
                 <p style="color: #64748b; font-size: 1.1rem; line-height: 1.6; margin-bottom: 25px;">
                     Get ahead with specialized <strong>KPSEA, KJSEA, and KCSE</strong> predictions and 
-                    <strong>Termly Updated Exams</strong>.
+                    <strong>Termly Updated Exams</strong> for the 2026 academic year.
                 </p>
                 <div style="background: #dbeafe; color: #1e40af; padding: 8px 20px; border-radius: 25px; display: inline-block; margin-bottom: 25px; font-weight: bold; border: 1px solid #bfdbfe;">
                     📍 KSH 50 - KSH 100
@@ -439,7 +458,7 @@ footer i {
         <p style="color: #94a3b8; margin-bottom: 30px;">Follow Peter Musau Mutua for the latest educational updates.</p>
         
         <div class="footer-socials">
-            <a href="https://www.facebook.com/petermutua" target="_blank" class="soc-btn" style="background: #1877F2;">
+            <a href="https://www.facebook.com/profile.php?id=100069418325247" target="_blank" class="soc-btn" style="background: #1877F2;">
                 <i class="fab fa-facebook-f"></i> Facebook
             </a>
             <a href="https://wa.me/254746357349" target="_blank" class="soc-btn" style="background: #25d366;">
@@ -456,5 +475,10 @@ footer i {
         </div>
     </footer>
 
+    <a href="#" class="scroll-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
 </body>
 </html>
+         
