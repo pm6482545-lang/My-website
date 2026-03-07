@@ -22,6 +22,36 @@
     <title>PETER MUSAU MUTUA | Educator • Minister • Musician</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* --- 2026 Modern Portfolio Styles --- */
+:root {
+    --primary-blue: #2563eb;
+    --bg-light: #f9fafb;
+    --text-dark: #111827;
+}
+
+/* Testimonials */
+.testimonial-section { padding: 60px 20px; background: var(--bg-light); text-align: center; }
+.bento-grid { display: grid; gap: 20px; max-width: 1000px; margin: 0 auto; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.t-card { background: white; padding: 25px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: 0.3s; }
+.t-card:hover { transform: translateY(-5px); }
+
+/* Call to Action */
+.cta-section { padding: 50px 20px; text-align: center; background: white; }
+.cta-btn { 
+    display: inline-block; padding: 18px 40px; background: var(--primary-blue); color: white; 
+    text-decoration: none; font-weight: 700; border-radius: 50px; transition: 0.3s;
+    box-shadow: 0 10px 15px rgba(37, 99, 235, 0.2);
+}
+.cta-btn:hover { background: #1d4ed8; transform: scale(1.05); }
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+    position: fixed; bottom: 30px; right: 30px; display: none;
+    background: var(--primary-blue); color: white; border: none;
+    width: 50px; height: 50px; border-radius: 50%; cursor: pointer;
+    font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 1000;
+}
+
         :root {
             --primary: #3498db;
             --secondary: #2c3e50;
@@ -193,6 +223,58 @@
             </form>
         </div>
     </div>
+    <section class="testimonial-section">
+    <h2 style="margin-bottom: 30px;">What People Say</h2>
+    <div class="bento-grid">
+        <div class="t-card">
+            <p>"Peter's ministry and music bring so much peace and inspiration to our congregation."</p>
+            <p><strong>- Church Member</strong></p>
+        </div>
+        <div class="t-card">
+            <p>"A dedicated educator who truly cares about the success of every student."</p>
+            <p><strong>- Fellow Teacher</strong></p>
+        </div>
+    </div>
+<section class="testimonial-section">
+    <h2 style="margin-bottom: 30px;">What People Say</h2>
+    <div class="bento-grid">
+        <div class="t-card">
+            <p>"Peter's ministry and music bring so much peace and inspiration to our congregation."</p>
+            <p><strong>- Church Member</strong></p>
+        </div>
+        <div class="t-card">
+            <p>"A dedicated educator who truly cares about the success of every student."</p>
+            <p><strong>- Fellow Teacher</strong></p>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <h3>Interested in working together?</h3>
+    <br>
+    <a href="mailto:your-email@gmail.com" class="cta-btn">Send Me a Message</a>
+</section>
+
+<button onclick="topFunction()" id="scrollTopBtn" title="Go to top">↑</button>
+<script>
+let mybutton = document.getElementById("scrollTopBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+
+
 
     <footer>
         <p>"Education is a constant, the student is the variable—together we create infinite possibilities."</p>
