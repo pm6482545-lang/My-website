@@ -3,51 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resource Hub | Peter Musau</title>
+    <title>Digital Library | Peter Musau</title>
     <style>
         :root { --primary: #2c3e50; --secondary: #27ae60; --light: #f4f7f6; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--light); text-align: center; }
-        header { background: var(--primary); color: white; padding: 40px 20px; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--light); text-align: center; color: var(--primary); }
+        header { background: var(--primary); color: white; padding: 40px 20px; position: sticky; top: 0; z-index: 100; }
         
-        .container { max-width: 800px; margin: 20px auto; padding: 20px; }
-        .folder-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; }
+        .container { max-width: 1000px; margin: 20px auto; padding: 0 15px; }
+        .group-title { background: #e0e0e0; padding: 10px; margin: 30px 0 15px; border-radius: 5px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; color: #555; }
         
-        /* The Folder Button */
+        .folder-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; }
+        
+        /* Professional Folder Styling */
         .folder-card {
-            background: white; border-radius: 12px; padding: 30px;
+            background: white; border-radius: 12px; padding: 25px 10px;
             text-decoration: none; color: var(--primary);
-            border: 1px solid #ddd; display: block;
-            transition: 0.3s;
+            border: 1px solid #ddd; transition: 0.3s;
+            display: flex; flex-direction: column; align-items: center;
         }
         .folder-card:hover { transform: translateY(-5px); border-color: var(--secondary); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .icon { font-size: 50px; display: block; margin-bottom: 10px; }
-        .name { font-weight: bold; }
+        .icon { font-size: 40px; display: block; margin-bottom: 10px; }
+        .name { font-weight: bold; font-size: 0.95rem; }
+        
+        .back-link { color: white; text-decoration: none; font-size: 0.85rem; border: 1px solid white; padding: 6px 15px; border-radius: 20px; display: inline-block; margin-bottom: 15px; }
     </style>
 </head>
 <body>
 
 <header>
+    <a href="index.html" class="back-link">← Back to Home</a>
     <h1>Digital Resource Library</h1>
-    <p>Choose a category to find your documents</p>
+    <p>Select a level to access revision materials</p>
 </header>
 
 <div class="container">
+
+    <div class="group-title">Pre-Primary (CBC)</div>
     <div class="folder-grid">
-        <a href="pp1-view.html" class="folder-card">
-            <span class="icon">📁</span>
-            <span class="name">PP1 Resources</span>
-        </a>
-
-        <a href="kcse-view.html" class="folder-card">
-            <span class="icon">📂</span>
-            <span class="name">KCSE Revision</span>
-        </a>
-
-        <a href="pro-view.html" class="folder-card">
-            <span class="icon">💼</span>
-            <span class="name">Teacher's Corner</span>
-        </a>
+        <a href="view-pp1.html" class="folder-card"><span class="icon">🎨</span><span class="name">PP1</span></a>
+        <a href="view-pp2.html" class="folder-card"><span class="icon">🖍️</span><span class="name">PP2</span></a>
     </div>
+
+    <div class="group-title">Lower Primary (Grade 1-3)</div>
+    <div class="folder-grid">
+        <a href="view-g1.html" class="folder-card"><span class="icon">📚</span><span class="name">Grade 1</span></a>
+        <a href="view-g2.html" class="folder-card"><span class="icon">📚</span><span class="name">Grade 2</span></a>
+        <a href="view-g3.html" class="folder-card"><span class="icon">📚</span><span class="name">Grade 3</span></a>
+    </div>
+
+    <div class="group-title">Upper Primary (Grade 4-6)</div>
+    <div class="folder-grid">
+        <a href="view-g4.html" class="folder-card"><span class="icon">📖</span><span class="name">Grade 4</span></a>
+        <a href="view-g5.html" class="folder-card"><span class="icon">📖</span><span class="name">Grade 5</span></a>
+        <a href="view-g6.html" class="folder-card"><span class="icon">📖</span><span class="name">Grade 6</span></a>
+    </div>
+
+    <div class="group-title">Junior School (Grade 7-10)</div>
+    <div class="folder-grid">
+        <a href="view-g7.html" class="folder-card"><span class="icon">🧪</span><span class="name">Grade 7</span></a>
+        <a href="view-g8.html" class="folder-card"><span class="icon">🧪</span><span class="name">Grade 8</span></a>
+        <a href="view-g9.html" class="folder-card"><span class="icon">🧪</span><span class="name">Grade 9</span></a>
+        <a href="view-g10.html" class="folder-card"><span class="icon">📐</span><span class="name">Grade 10</span></a>
+    </div>
+
+    <div class="group-title">High School & Professional</div>
+    <div class="folder-grid">
+        <a href="view-kcse.html" class="folder-card"><span class="icon">🎓</span><span class="name">KCSE Revision</span></a>
+        <a href="view-pro.html" class="folder-card"><span class="icon">💼</span><span class="name">Teacher's Corner</span></a>
+    </div>
+
 </div>
 
 </body>
