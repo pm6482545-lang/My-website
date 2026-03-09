@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc> https://pm6482545-lang.github.io/Peter-Musau/</loc>
-    <lastmod>2026-03-07</lastmod>
+    <loc>https://petermusau.co.ke/</loc>
+    <lastmod>2026-03-09</lastmod>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://petermusau.co.ke/library.html</loc>
+    <lastmod>2026-03-09</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://petermusau.co.ke/predictions.html</loc>
+    <lastmod>2026-03-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url><loc>https://petermusau.co.ke/PP1/</loc></url>
+  <url><loc>https://petermusau.co.ke/PP2/</loc></url>
+  <url><loc>https://petermusau.co.ke/G1/</loc></url>
+  <url><loc>https://petermusau.co.ke/G2/</loc></url>
+  <url><loc>https://petermusau.co.ke/G3/</loc></url>
+  <url><loc>https://petermusau.co.ke/G4/</loc></url>
+  <url><loc>https://petermusau.co.ke/G5/</loc></url>
+  <url><loc>https://petermusau.co.ke/G6/</loc></url>
+  <url><loc>https://petermusau.co.ke/G7/</loc></url>
+  <url><loc>https://petermusau.co.ke/G8/</loc></url>
+  <url><loc>https://petermusau.co.ke/G9/</loc></url>
+  <url><loc>https://petermusau.co.ke/G10/</loc></url>
+  <url><loc>https://petermusau.co.ke/KCSE/</loc></url>
+  <url><loc>https://petermusau.co.ke/PROFESSIONAL/</loc></url>
 </urlset>
