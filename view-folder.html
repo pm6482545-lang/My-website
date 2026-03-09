@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | Peter Musau</title>
+    <style>
+        :root { --primary: #2c3e50; --secondary: #27ae60; --light: #f4f7f6; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--light); color: var(--primary); }
+        header { background: var(--primary); color: white; padding: 30px 20px; text-align: center; }
+        
+        .container { max-width: 800px; margin: 20px auto; padding: 0 15px; }
+        .back-link { color: white; text-decoration: none; font-size: 0.85rem; border: 1px solid white; padding: 6px 15px; border-radius: 20px; display: inline-block; margin-bottom: 15px; }
+        
+        #folder-title { margin: 10px 0; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .file-list { display: grid; gap: 12px; margin-top: 20px; }
+        
+        /* File Card Styling */
+        .file-card {
+            background: white; padding: 15px 20px; border-radius: 10px;
+            display: flex; justify-content: space-between; align-items: center;
+            border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .file-name { font-weight: 600; color: var(--primary); font-size: 0.95rem; flex: 1; margin-right: 10px; }
+        
+        .download-btn {
+            background: var(--secondary); color: white; text-decoration: none;
+            padding: 8px 18px; border-radius: 6px; font-weight: bold;
+            font-size: 0.85rem; transition: 0.3s;
+        }
+        .download-btn:hover { background: #219150; transform: scale(1.05); }
+
+        .loading, .error-msg { text-align: center; padding: 40px; color: #777; font-style: italic; }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="library.html" class="back-link">← Back to Library</a>
+    <h1 id="folder-title">Accessing Resources...</h1>
+</header>
+
+<div class="container">
+    <div id="file-container" class="file-list">
+        <div class="loading">Scanning the library for files...</div>
+    </div>
+</div>
+
+<script>
+    // 1. Capture the folder name from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const folderName = urlParams.get('folder'); 
+    
+    // Update Title
+    if (folderName) {
+        document.getElementById('folder-title').innerText = folderName + " MATERIALS";
+    }
+
+    // 2. GitHub Configuration
+    const username = "pm6482545-lang";
+    const repo = "Peter-Musau";
+
+    async function loadFiles() {
+        const container = document.getElementById('file-container');
+        
+        try {
+            // Fetch content from the Documents/[folderName] folder
+            const response = await fetch(`https://api.github.com/repos/${username}/${repo}/contents/Documents/${folderName}`);
+            
+            if (!response.ok) throw new Error('Folder not found');
+
+            const files = await response.json();
+            container.innerHTML = ''; // Clear loading message
+
+            // Check if folder is empty
+            const pdfFiles = files.filter(file => file.type === "file");
+            
+            if (pdfFiles.length === 0) {
+                container.innerHTML = '<div class="error-msg">No documents have been uploaded to this folder yet. Check back soon!</div>';
+                return;
+            }
+
+            // Create a card for each file found
+            pdfFiles.forEach(file => {
+                const card = document.createElement('div');
+                card.className = 'file-card';
+                card.innerHTML = `
+                    <span class="file-name">${file.name}</span>
+                    <a href="${file.download_url}" class="download-btn" target="_blank">DOWNLOAD PDF</a>
+                `;
+                container.appendChild(card);
+            });
+
+        } catch (error) {
+            container.innerHTML = '<div class="error-msg">Unable to load materials. Please ensure the folder exists on GitHub.</div>';
+        }
+    }
+
+    if (folderName) {
+        loadFiles();
+    } else {
+        document.getElementById('file-container').innerHTML = '<div class="error-msg">Invalid folder selection.</div>';
+    }
+</script>
+
+</body>
+</html>
